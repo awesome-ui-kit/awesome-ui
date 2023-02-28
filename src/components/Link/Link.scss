@@ -1,0 +1,144 @@
+.aw-ui-link {
+  font: inherit;
+  text-shadow: none;
+  font-weight: 400;
+  transition: 0.5s all;
+  outline: none;
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  column-gap: 5px;
+
+  &.aw-ui-link-disabled {
+    color: var(--grey-500);
+
+    &:hover {
+      color: var(--grey-500);
+    }
+
+    &:focus-visible {
+      color: var(--grey-500);
+    }
+
+    &:active {
+      color: var(--grey-500);
+    }
+  }
+}
+
+.aw-ui-link-normal {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.aw-ui-link-big {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.aw-ui-link-main,
+.aw-ui-link-secondary,
+.aw-ui-link-outline {
+  min-width: 36px;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid transparent;
+
+  &.aw-ui-link-disabled {
+    background-color: var(--grey-300);
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: var(--grey-300);
+      border: 1px solid transparent;
+    }
+
+    &:focus-visible {
+      background-color: var(--grey-300);
+      border: 1px solid transparent;
+    }
+
+    &:active {
+      background-color: var(--grey-300);
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.aw-ui-link-main {
+  color: var(--background);
+  background-color: var(--main);
+
+  &:hover {
+    background-color: var(--hover);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--focused);
+  }
+
+  &:active {
+    background-color: var(--pressed);
+  }
+}
+
+.aw-ui-link-secondary {
+  color: var(--main);
+  background-color: var(--background);
+
+  &:hover {
+    color: var(--hover);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--focused);
+  }
+
+  &:active {
+    color: var(--pressed);
+  }
+}
+
+.aw-ui-link-outline {
+  color: var(--main);
+  background-color: var(--background);
+  border-color: var(--main);
+
+  &:hover {
+    color: var(--hover);
+    border-color: var(--hover);
+  }
+
+  &:focus-visible {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px var(--focused);
+  }
+
+  &:active {
+    color: var(--pressed);
+    border-color: var(--hover);
+  }
+}
+
+.aw-ui-link-text {
+  color: var(--main);
+  text-decoration: underline;
+  transition: none;
+
+  &:hover {
+    color: var(--hover);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--focused);
+    outline-offset: 3px;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: var(--pressed);
+    text-decoration: none;
+  }
+}

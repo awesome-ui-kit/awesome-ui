@@ -1,0 +1,57 @@
+{
+  "name": "@karinakarapetyanweb/awesome-ui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/karinakarapetyanweb"
+  },
+  "version": "1.0.5",
+  "description": "This is a simple ui-framework, which will allow you to create an awesome web-applications with already prepared and thought out to the smallest detail components.",
+  "scripts": {
+    "rollup": "rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "Karina Karapetyan",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^17.0.34",
+    "babel-loader": "^8.3.0",
+    "classnames": "^2.3.2",
+    "css-loader": "^6.7.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.60.0",
+    "rollup-plugin-copy-assets": "^2.0.3",
+    "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-img": "^1.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
+}

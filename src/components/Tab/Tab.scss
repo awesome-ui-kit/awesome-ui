@@ -1,0 +1,53 @@
+.aw-ui-tab {
+  margin: 0;
+  display: inline-block;
+  background-color: var(--grey-100);
+  font: inherit;
+  border: none;
+  color: var(--grey-900);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  padding: 12px 16px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary-hover);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--primary-background);
+    position: relative;
+    z-index: 1;
+  }
+
+  &:active {
+    color: var(--primary-pressed);
+  }
+
+  &:disabled {
+    color: var(--grey-600);
+    background-color: var(--grey-300);
+  }
+}
+
+.aw-ui-tab-active {
+  box-shadow: inset 0px -4px 0px var(--primary-main);
+
+  &:hover {
+    box-shadow: inset 0px -4px 0px var(--primary-hover);
+  }
+
+  &:focus-visible {
+    box-shadow: none;
+  }
+
+  &:active {
+    box-shadow: inset 0px -4px 0px var(--primary-pressed);
+  }
+
+  &:disabled {
+    box-shadow: inset 0px -4px 0px var(--grey-600);
+  }
+}

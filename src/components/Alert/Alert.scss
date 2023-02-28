@@ -1,0 +1,19 @@
+.aw-ui-alert {
+  border-radius: 4px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  font-weight: 400;
+  color: var(--main);
+}
+
+.aw-ui-alert-normal {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.aw-ui-alert-small {
+  padding: 7px;
+  font-size: 12px;
+  line-height: 18px;
+}

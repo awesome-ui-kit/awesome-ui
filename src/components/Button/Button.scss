@@ -1,0 +1,136 @@
+.aw-ui-btn {
+  margin: 0;
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  min-width: 36px;
+  column-gap: 5px;
+  font: inherit;
+  text-shadow: none;
+  font-weight: 400;
+  padding: 8px 14px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.5s all;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+
+  &:disabled {
+    background-color: var(--grey-300);
+    color: var(--grey-500);
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: var(--grey-300);
+      color: var(--grey-500);
+      border: 1px solid transparent;
+    }
+
+    &:focus-visible {
+      background-color: var(--grey-300);
+      color: var(--grey-500);
+      border: 1px solid transparent;
+    }
+
+    &:active {
+      background-color: var(--grey-300);
+      color: var(--grey-500);
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.aw-ui-btn-square {
+  border-radius: 4px;
+}
+
+.aw-ui-btn-round {
+  border-radius: 20px;
+}
+
+.aw-ui-btn-full-width {
+  width: 100%;
+}
+
+.aw-ui-btn-normal {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.aw-ui-btn-big {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.aw-ui-btn-main {
+  color: var(--background);
+  background-color: var(--main);
+
+  &:hover {
+    background-color: var(--hover);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--focused);
+  }
+
+  &:active {
+    background-color: var(--pressed);
+  }
+}
+
+.aw-ui-btn-secondary {
+  color: var(--main);
+  background-color: var(--background);
+
+  &:hover {
+    color: var(--hover);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--focused);
+  }
+
+  &:active {
+    color: var(--pressed);
+  }
+}
+
+.aw-ui-btn-outline {
+  color: var(--main);
+  background-color: var(--background);
+  border-color: var(--main);
+
+  &:hover {
+    color: var(--hover);
+    border-color: var(--hover);
+  }
+
+  &:focus-visible {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px var(--focused);
+  }
+
+  &:active {
+    color: var(--pressed);
+    border-color: var(--hover);
+  }
+}
+
+.aw-ui-btn-text {
+  color: var(--main);
+
+  &:hover {
+    color: var(--hover);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--focused);
+  }
+
+  &:active {
+    color: var(--pressed);
+  }
+}

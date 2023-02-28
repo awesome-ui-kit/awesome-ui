@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/inter-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/inter-700.woff2") format("woff2");
+}
+
+:root {
+  /* primary */
+  --primary-main: #5137d7;
+  --primary-background: #f3f1fb;
+  --primary-border: #cfc1fa;
+  --primary-hover: #3b24b2;
+  --primary-pressed: #290d80;
+  --primary-focused: #dacff7;
+
+  /* success */
+  --success-main: #136918;
+  --success-background: #efffef;
+  --success-border: #88b28a;
+  --success-hover: #0f5512;
+  --success-pressed: #0b490f;
+  --success-focused: #bee0be;
+
+  /* danger */
+  --danger-main: #b4040e;
+  --danger-background: #fff2f3;
+  --danger-border: #d98186;
+  --danger-hover: #96030c;
+  --danger-pressed: #660308;
+  --danger-focused: #f0cdcf;
+
+  /* warning */
+  --warning-main: #bfa417;
+  --warning-background: #fff9da;
+  --warning-border: #e9d04e;
+  --warning-hover: #b89a00;
+  --warning-pressed: #806d0e;
+  --warning-focused: #f2e9b6;
+
+  /* info */
+  --info-main: #1650c0;
+  --info-background: #f2f7ff;
+  --info-border: #8aa7df;
+  --info-hover: #083ca0;
+  --info-pressed: #0c2a66;
+  --info-focused: #d0dcf2;
+
+  /* grey */
+  --grey-100: #ffffff;
+  --grey-200: #fafafa;
+  --grey-300: #f1f1f1;
+  --grey-400: #d3d3d4;
+  --grey-500: #b6b6b7;
+  --grey-600: #919193;
+  --grey-700: #6c6c6e;
+  --grey-800: #48484a;
+  --grey-900: #232326;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 44px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

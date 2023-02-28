@@ -1,0 +1,75 @@
+.aw-ui-switch {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--grey-900);
+}
+
+.aw-ui-switch span {
+  margin-left: 8px;
+}
+
+.aw-ui-switch-btn {
+  position: relative;
+  background-color: var(--grey-400);
+  width: 36px;
+  height: 20px;
+  border: 1px solid var(--grey-400);
+  cursor: pointer;
+  border-radius: 16px;
+  transition: background-color 0.5s;
+  outline: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 14px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    background-color: var(--grey-100);
+    transition: left 0.3s;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: var(--main);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--focused);
+  }
+
+  &:disabled {
+    background-color: var(--grey-400);
+
+    &::before {
+      background-color: var(--grey-300);
+    }
+  }
+}
+
+.aw-ui-switch-btn-on {
+  background-color: var(--main);
+  border-color: var(--main);
+
+  &::before {
+    left: calc(100% - 14px - 2px);
+  }
+
+  &:hover {
+    background-color: var(--hover);
+  }
+
+  &:disabled {
+    background-color: var(--grey-400);
+    border-color: var(--grey-400);
+
+    &::before {
+      background-color: var(--grey-300);
+    }
+  }
+}
