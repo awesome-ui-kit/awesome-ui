@@ -1,9 +1,9 @@
 {
-  "name": "@karinakarapetyanweb/awesome-ui",
+  "name": "@awesome-ui-kit/awesome-ui",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/karinakarapetyanweb"
+    "registry": "https://npm.pkg.github.com/awesome-ui-kit"
   },
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This is a simple ui-framework, which will allow you to create an awesome web-applications with already prepared and thought out to the smallest detail components.",
   "scripts": {
     "rollup": "rollup -c",
