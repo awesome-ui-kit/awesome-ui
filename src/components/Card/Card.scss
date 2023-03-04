@@ -1,0 +1,24 @@
+.aw-ui-card {
+  width: 100%;
+  background-color: var(--grey-300);
+  color: var(--grey-700);
+}
+
+.aw-ui-card-content {
+  padding: 15px;
+}
+
+.aw-ui-card h3 {
+  color: var(--grey-900);
+}
+
+.aw-ui-card img {
+  max-height: 450px;
+  display: block;
+  width: 100%;
+}
+
+.aw-ui-card p {
+  font-size: 14px;
+  line-height: 20px;
+}

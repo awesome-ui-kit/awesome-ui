@@ -1,20 +1,48 @@
-// import React from "react";
-// import { ComponentStory, ComponentMeta } from "@storybook/react";
-// import Accordion from "./Card";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Card from './Card';
+import Tag from '../Tag';
+import Button from '../Button';
 
-// export default {
-//   title: "Components/Page elements/Accordion",
-//   component: Accordion,
-// } as ComponentMeta<typeof Accordion>;
+export default {
+  title: 'Components/Page elements/Card',
+  component: Card,
+} as ComponentMeta<typeof Card>;
 
-// const Template: ComponentStory<typeof Accordion> = (args) => (
-//   <Accordion {...args} />
-// );
+const Template: ComponentStory<typeof Card> = (args) => (
+  <Card {...args} style={{ width: 300 }} />
+);
 
-// export const MainAccordion = Template.bind({});
-// MainAccordion.args = {
-//   title: "Accordion title",
-//   children:
-//     "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-// };
-// MainAccordion.storyName = "Accordion";
+export const MainCard = Template.bind({});
+MainCard.args = {
+  image: 'https://picsum.photos/id/237/300/300',
+  title: 'Card Title',
+  children: (
+    <>
+      <p>
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters, as opposed to using Content here, content here, making it look
+        like readable English. Many desktop publishing packages and web page
+        editors now use Lorem Ipsum as their default model text, and a search
+        for lorem ipsum will uncover many web sites still in their infancy.
+        Various versions have evolved over the years, sometimes by accident,
+        sometimes on purpose (injected humour and the like).
+      </p>
+      <div style={{ marginBottom: 15 }}>
+        <Tag style={{ marginRight: 10 }} color="danger">
+          lorem
+        </Tag>
+        <Tag style={{ marginRight: 10 }} color="info">
+          purpose
+        </Tag>
+        <Tag style={{ marginRight: 10 }} color="success">
+          content
+        </Tag>
+      </div>
+      <Button color="info">Button</Button>
+    </>
+  ),
+};
+MainCard.storyName = 'Card';
