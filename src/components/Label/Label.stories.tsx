@@ -10,7 +10,8 @@ export default {
 
 const TemplateNormal: ComponentStory<typeof Label> = (args) => (
   <>
-    <Label {...args} /> <Input placeholder="Your name" />
+    <Label {...args} htmlFor="name" />
+    <Input placeholder="Your name" id="name" />
   </>
 );
 
@@ -21,7 +22,8 @@ NormalLabel.args = {
 
 const TemplateBig: ComponentStory<typeof Label> = (args) => (
   <>
-    <Label {...args} /> <Input placeholder="Your name" sizing="big" />
+    <Label {...args} htmlFor="name-big" />
+    <Input placeholder="Your name" sizing="big" id="big-name" />
   </>
 );
 
