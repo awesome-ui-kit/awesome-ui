@@ -17,7 +17,6 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.20.12",
-    "@mdx-js/react": "^1.6.22",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-typescript": "^8.3.3",
@@ -61,11 +60,6 @@
   },
   "peerDependencies": {
     "react": "^18.2.0"
-  },
-  "overrides": {
-    "@mdx-js/react": {
-      "react": "$react"
-    }
   },
   "module": "dist/esm/index.js",
   "files": [
