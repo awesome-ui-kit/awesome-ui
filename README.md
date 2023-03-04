@@ -7,7 +7,8 @@ This is a simple ui-framework, which will allow you to create an awesome web-app
 <code>npm install @awesome-ui-kit/awesome-ui</code>
 
 <h2>Example</h2>
-<code>
+
+<h3>Button</h3>
 
 ```javascript
     import React from 'react'; 
@@ -17,5 +18,3 @@ This is a simple ui-framework, which will allow you to create an awesome web-app
       return <Button color="success">Button</Button>;
     }
 ```
-
-</code>
