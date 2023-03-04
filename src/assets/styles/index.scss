@@ -1,27 +1,3 @@
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/inter-400.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/inter-500.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/inter-700.woff2") format("woff2");
-}
-
 :root {
   /* primary */
   --primary-main: #5137d7;
@@ -89,7 +65,7 @@ img {
 
 body {
   margin: 0;
-  font-family: "Inter", Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -131,8 +107,8 @@ p {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;

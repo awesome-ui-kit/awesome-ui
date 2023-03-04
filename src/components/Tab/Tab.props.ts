@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, ButtonHTMLAttributes } from "react";
+import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 
 export interface TabProps
   extends Omit<
@@ -6,7 +6,7 @@ export interface TabProps
       ButtonHTMLAttributes<HTMLButtonElement>,
       HTMLButtonElement
     >,
-    "type"
+    'type'
   > {
   active?: boolean;
 }

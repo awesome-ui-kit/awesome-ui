@@ -1,25 +1,25 @@
 .aw-ui-tag {
-  margin: 0;
   display: inline-grid;
   grid-auto-flow: column;
   align-items: center;
-  column-gap: 5px;
-  font-weight: 400;
-  border-radius: 20px;
-  border: 1px solid transparent;
+  margin: 0;
   color: var(--main);
+  font-weight: 400;
+  column-gap: 5px;
   background-color: var(--background);
+  border: 1px solid transparent;
   border-color: var(--main);
+  border-radius: 20px;
 }
 
 .aw-ui-tag-small {
+  padding: 5px 12px;
   font-size: 12px;
   line-height: 16px;
-  padding: 5px 12px;
 }
 
 .aw-ui-tag-normal {
+  padding: 7px 15px;
   font-size: 14px;
   line-height: 18px;
-  padding: 7px 15px;
 }

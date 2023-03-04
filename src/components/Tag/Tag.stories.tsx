@@ -1,9 +1,9 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Tag from "./Tag";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Tag from './Tag';
 
 export default {
-  title: "Components/Page elements/Tag",
+  title: 'Components/Page elements/Tag',
   component: Tag,
 } as ComponentMeta<typeof Tag>;
 
@@ -11,9 +11,9 @@ const Template: ComponentStory<typeof Tag> = (args) => <Tag {...args} />;
 
 export const MainTag = Template.bind({});
 MainTag.args = {
-  children: "Tag",
+  children: 'Tag',
 };
-MainTag.storyName = "Tag";
+MainTag.storyName = 'Tag';
 
 export const TagWithIcon = Template.bind({});
 TagWithIcon.args = {

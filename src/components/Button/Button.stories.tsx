@@ -1,9 +1,9 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Button from './Button';
 
 export default {
-  title: "Components/Form elements/Button",
+  title: 'Components/Form elements/Button',
   component: Button,
 } as ComponentMeta<typeof Button>;
 
@@ -11,9 +11,9 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const MainButton = Template.bind({});
 MainButton.args = {
-  children: "Button",
+  children: 'Button',
 };
-MainButton.storyName = "Button";
+MainButton.storyName = 'Button';
 
 export const ButtonWithIcon = Template.bind({});
 ButtonWithIcon.args = {

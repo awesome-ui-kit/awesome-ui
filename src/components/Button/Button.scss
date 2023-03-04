@@ -1,42 +1,44 @@
+@import "../../assets/styles/mixins.scss";
+
 .aw-ui-btn {
-  margin: 0;
   display: inline-grid;
   grid-auto-flow: column;
   align-items: center;
   min-width: 36px;
-  column-gap: 5px;
-  font: inherit;
-  text-shadow: none;
-  font-weight: 400;
+  margin: 0;
   padding: 8px 14px;
+  font: inherit;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  column-gap: 5px;
   background-color: transparent;
   border: 1px solid transparent;
+  outline: none;
   cursor: pointer;
   transition: 0.5s all;
-  outline: none;
-  text-decoration: none;
-  text-align: center;
 
   &:disabled {
-    background-color: var(--grey-300);
     color: var(--grey-500);
+    background-color: var(--grey-300);
     border: 1px solid transparent;
 
     &:hover {
-      background-color: var(--grey-300);
       color: var(--grey-500);
+      background-color: var(--grey-300);
       border: 1px solid transparent;
     }
 
-    &:focus-visible {
-      background-color: var(--grey-300);
+    @include focus-visible {
       color: var(--grey-500);
+      background-color: var(--grey-300);
       border: 1px solid transparent;
     }
 
     &:active {
-      background-color: var(--grey-300);
       color: var(--grey-500);
+      background-color: var(--grey-300);
       border: 1px solid transparent;
     }
   }
@@ -72,7 +74,7 @@
     background-color: var(--hover);
   }
 
-  &:focus-visible {
+  @include focus-visible {
     box-shadow: 0 0 0 3px var(--focused);
   }
 
@@ -89,7 +91,7 @@
     color: var(--hover);
   }
 
-  &:focus-visible {
+  @include focus-visible {
     box-shadow: 0 0 0 3px var(--focused);
   }
 
@@ -108,7 +110,7 @@
     border-color: var(--hover);
   }
 
-  &:focus-visible {
+  @include focus-visible {
     border-color: transparent;
     box-shadow: 0 0 0 3px var(--focused);
   }
@@ -126,7 +128,7 @@
     color: var(--hover);
   }
 
-  &:focus-visible {
+  @include focus-visible {
     box-shadow: 0 0 0 3px var(--focused);
   }
 

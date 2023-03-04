@@ -1,27 +1,28 @@
+@import "../../assets/styles/mixins.scss";
+
 .aw-ui-select {
   display: block;
-  font: inherit;
   width: 100%;
   padding: 6px 40px 6px 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  font: inherit;
   background-color: var(--grey-100);
-  border: 1px solid var(--border-color);
-  height: 32px;
-  outline: 0;
   background-image: url("../../assets/images/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
+  outline: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
   transition: box-shadow 0.5s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
   &:hover:not(:disabled) {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--border-color);
   }
 
-  &:focus-visible {
+  @include focus-visible {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--border-color);
   }
 
@@ -29,4 +30,18 @@
     background-color: var(--grey-300);
     border: 1px solid var(--grey-300);
   }
+}
+
+.aw-ui-select-normal {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.aw-ui-select-big {
+  height: 38px;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 20px;
 }

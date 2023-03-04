@@ -1,33 +1,37 @@
-import React from "react";
-import "../../assets/styles/index.css";
-import { SelectProps } from "./Select.props";
-import cn from "classnames";
-import "./Select.scss";
-import { IOption } from "./types";
+import React from 'react';
+import '../../assets/styles/index.scss';
+import { SelectProps } from './Select.props';
+import cn from 'classnames';
+import './Select.scss';
+import { IOption } from './types';
 
 const Select = ({
-  color = "grey",
+  color = 'grey',
+  sizing = 'normal',
   options,
+  style,
   className,
-  children,
   ...props
 }: SelectProps) => {
   const borderColor =
-    color === "grey" ? `var(--grey-500)` : `var(--${color}-main)`;
+    color === 'grey' ? `var(--grey-500)` : `var(--${color}-main)`;
 
   return (
     <select
-      className={cn("aw-ui-select")}
+      className={cn(`aw-ui-select aw-ui-select-${sizing}`, className)}
       style={
         {
-          "--border-color": borderColor,
+          '--border-color': borderColor,
+          ...style,
         } as React.CSSProperties
       }
       {...props}
     >
       {options.length !== 0 &&
         options.map((option: IOption) => (
-          <option value={option.value}>{option.label}</option>
+          <option value={option.value} key={option.value}>
+            {option.label}
+          </option>
         ))}
     </select>
   );

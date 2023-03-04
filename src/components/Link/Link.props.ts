@@ -1,12 +1,17 @@
-import { DetailedHTMLProps, AnchorHTMLAttributes } from "react";
+import { DetailedHTMLProps, AnchorHTMLAttributes } from 'react';
+import { IStyle } from '../../types/IStyle';
 
 export interface LinkProps
-  extends DetailedHTMLProps<
-    AnchorHTMLAttributes<HTMLAnchorElement>,
-    HTMLAnchorElement
+  extends Omit<
+    DetailedHTMLProps<
+      AnchorHTMLAttributes<HTMLAnchorElement>,
+      HTMLAnchorElement
+    >,
+    'style'
   > {
-  color?: "primary" | "success" | "danger" | "warning" | "info";
-  size?: "normal" | "big";
-  view?: "main" | "secondary" | "outline" | "text";
+  color?: 'primary' | 'success' | 'danger' | 'warning' | 'info';
+  size?: 'normal' | 'big';
+  view?: 'main' | 'secondary' | 'outline' | 'text';
   disabled?: boolean;
+  style?: IStyle;
 }

@@ -1,15 +1,15 @@
-import React from "react";
-import "../../assets/styles/index.css";
-import { NotificationProps } from "./Alert.props";
-import cn from "classnames";
-import "./Alert.scss";
+import React from 'react';
+import '../../assets/styles/index.scss';
+import { NotificationProps } from './Alert.props';
+import cn from 'classnames';
+import './Alert.scss';
 
 const Alert = ({
   text,
-  color = "info",
-  size = "normal",
+  color = 'primary',
+  size = 'normal',
+  style,
   className,
-  children,
   ...props
 }: NotificationProps) => {
   return (
@@ -18,12 +18,13 @@ const Alert = ({
       {...props}
       style={
         {
-          "--main": `var(--${color}-main)`,
-          "--background": `var(--${color}-background)`,
-          "--border": `var(--${color}-border)`,
-          "--hover": `var(--${color}-hover)`,
-          "--pressed": `var(--${color}-pressed)`,
-          "--focused": `var(--${color}-focused)`,
+          '--main': `var(--${color}-main)`,
+          '--background': `var(--${color}-background)`,
+          '--border': `var(--${color}-border)`,
+          '--hover': `var(--${color}-hover)`,
+          '--pressed': `var(--${color}-pressed)`,
+          '--focused': `var(--${color}-focused)`,
+          ...style,
         } as React.CSSProperties
       }
     >

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "../../assets/styles/index.css";
-import { AccordionProps } from "./Accordion.props";
-import cn from "classnames";
-import "./Accordion.scss";
+import React, { useState } from 'react';
+import '../../assets/styles/index.scss';
+import { AccordionProps } from './Accordion.props';
+import cn from 'classnames';
+import './Accordion.scss';
 
 const Accordion = ({
   title,
@@ -16,8 +16,8 @@ const Accordion = ({
 
   return (
     <div
-      className={cn("aw-ui-accordion", className, {
-        "aw-ui-accordion-show": show,
+      className={cn('aw-ui-accordion', className, {
+        'aw-ui-accordion-show': show,
       })}
       {...props}
     >

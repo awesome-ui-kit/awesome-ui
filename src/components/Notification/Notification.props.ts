@@ -1,8 +1,13 @@
-import { DetailedHTMLProps, HTMLAttributes } from "react";
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { IStyle } from '../../types/IStyle';
 
 export interface NotificationProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  color?: "success" | "danger" | "warning" | "info";
+  extends Omit<
+    DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+    'style'
+  > {
+  color?: 'success' | 'danger' | 'warning' | 'info';
   title: string;
   onClose: () => void;
+  style?: IStyle;
 }

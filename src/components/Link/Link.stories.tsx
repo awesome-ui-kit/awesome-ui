@@ -1,9 +1,9 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Link from "./Link";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Link from './Link';
 
 export default {
-  title: "Components/Page elements/Link",
+  title: 'Components/Page elements/Link',
   component: Link,
 } as ComponentMeta<typeof Link>;
 
@@ -14,10 +14,10 @@ const Template: ComponentStory<typeof Link> = (args) => (
 export const MainLink = Template.bind({});
 
 MainLink.args = {
-  children: "Link",
+  children: 'Link',
 };
 
-MainLink.storyName = "Link";
+MainLink.storyName = 'Link';
 
 export const LinkWithIcon = Template.bind({});
 

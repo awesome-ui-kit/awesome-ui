@@ -1,15 +1,16 @@
-import React from "react";
-import "../../assets/styles/index.css";
-import { ButtonProps } from "./Button.props";
-import cn from "classnames";
-import "./Button.scss";
+import React from 'react';
+import '../../assets/styles/index.scss';
+import { ButtonProps } from './Button.props';
+import cn from 'classnames';
+import './Button.scss';
 
 const Button = ({
-  color = "primary",
-  size = "normal",
-  view = "main",
-  shape = "square",
+  color = 'primary',
+  size = 'normal',
+  view = 'main',
+  shape = 'square',
   fullWidth = false,
+  style,
   className,
   children,
   ...props
@@ -20,17 +21,18 @@ const Button = ({
         `aw-ui-btn aw-ui-btn-${size} aw-ui-btn-${view} aw-ui-btn-${shape}`,
         className,
         {
-          "aw-ui-btn-full-width": fullWidth,
-        }
+          'aw-ui-btn-full-width': fullWidth,
+        },
       )}
       style={
         {
-          "--main": `var(--${color}-main)`,
-          "--background": `var(--${color}-background)`,
-          "--border": `var(--${color}-border)`,
-          "--hover": `var(--${color}-hover)`,
-          "--pressed": `var(--${color}-pressed)`,
-          "--focused": `var(--${color}-focused)`,
+          '--main': `var(--${color}-main)`,
+          '--background': `var(--${color}-background)`,
+          '--border': `var(--${color}-border)`,
+          '--hover': `var(--${color}-hover)`,
+          '--pressed': `var(--${color}-pressed)`,
+          '--focused': `var(--${color}-focused)`,
+          ...style,
         } as React.CSSProperties
       }
       {...props}

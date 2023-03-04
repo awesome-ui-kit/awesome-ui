@@ -1,21 +1,23 @@
-import React, { useEffect, useRef } from "react";
-import "../../assets/styles/index.css";
-import { ModalProps } from "./Modal.props";
-import cn from "classnames";
-import "./Modal.scss";
-import { closeIcon } from "./icons";
+import React, { useEffect, useRef } from 'react';
+import '../../assets/styles/index.scss';
+import { ModalProps } from './Modal.props';
+import cn from 'classnames';
+import './Modal.scss';
+import { closeIcon } from './icons';
 
 const Modal = ({
-  color = "primary",
+  color = 'primary',
   title,
   onClose,
+  style,
   className,
   children,
   ...props
 }: ModalProps) => {
   const modalRef = useRef<null | HTMLDivElement>(null);
+
   const handleOverlayClick = (evt: React.SyntheticEvent<HTMLDivElement>) => {
-    if (evt.currentTarget.dataset.name === "overlay") {
+    if (evt.currentTarget.dataset.name === 'overlay') {
       onClose();
     }
   };
@@ -35,19 +37,25 @@ const Modal = ({
       className={cn(`aw-ui-modal`, `aw-ui-modal-${color}`, className)}
       style={
         {
-          "--main": `var(--${color}-main)`,
-          "--background": `var(--${color}-background)`,
-          "--border": `var(--${color}-border)`,
-          "--hover": `var(--${color}-hover)`,
-          "--pressed": `var(--${color}-pressed)`,
-          "--focused": `var(--${color}-focused)`,
+          '--main': `var(--${color}-main)`,
+          '--background': `var(--${color}-background)`,
+          '--border': `var(--${color}-border)`,
+          '--hover': `var(--${color}-hover)`,
+          '--pressed': `var(--${color}-pressed)`,
+          '--focused': `var(--${color}-focused)`,
+          ...style,
         } as React.CSSProperties
       }
       onClick={handleOverlayClick}
       data-name="overlay"
       {...props}
     >
-      <section className="aw-ui-modal-section" ref={modalRef} tabIndex={0}>
+      <section
+        className="aw-ui-modal-section"
+        ref={modalRef}
+        tabIndex={0}
+        onClick={(evt) => evt.stopPropagation()}
+      >
         <h2 className="aw-ui-modal-title">{title}</h2>
         {children}
         <button

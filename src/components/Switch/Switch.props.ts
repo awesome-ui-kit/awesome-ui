@@ -1,4 +1,5 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import { IStyle } from '../../types/IStyle';
 
 export interface SwitchProps
   extends Omit<
@@ -6,9 +7,11 @@ export interface SwitchProps
       ButtonHTMLAttributes<HTMLButtonElement>,
       HTMLButtonElement
     >,
-    "type"
+    'type' | 'style'
   > {
-  color?: "primary" | "success" | "danger" | "warning" | "info";
-  label?: string;
   active: boolean;
+  color?: 'primary' | 'success' | 'danger' | 'warning' | 'info';
+  label?: string;
+  size?: 'small' | 'normal';
+  style?: IStyle;
 }

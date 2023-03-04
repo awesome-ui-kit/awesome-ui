@@ -1,11 +1,11 @@
-import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
 export interface RadioProps
   extends Omit<
     DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
-    "type" | "id"
+    'type' | 'id'
   > {
   label: string;
   fieldId: string;
-  color?: "primary" | "success" | "danger" | "info";
+  color?: 'primary' | 'success' | 'danger' | 'info';
 }

@@ -1,38 +1,40 @@
-import React, { useState } from "react";
-import "../../assets/styles/index.css";
-import { SwitchProps } from "./Switch.props";
-import cn from "classnames";
-import "./Switch.scss";
+import React, { useEffect } from 'react';
+import '../../assets/styles/index.scss';
+import { SwitchProps } from './Switch.props';
+import cn from 'classnames';
+import './Switch.scss';
 
 const Switch = ({
-  color = "primary",
+  color = 'primary',
   label,
+  size = 'normal',
   active,
+  style,
   className,
-  children,
   ...props
 }: SwitchProps) => {
   return (
     <div
-      className={cn("aw-ui-switch")}
+      className={cn(`aw-ui-switch aw-ui-switch-${size}`, className)}
       style={
         {
-          "--main": `var(--${color}-main)`,
-          "--background": `var(--${color}-background)`,
-          "--border": `var(--${color}-border)`,
-          "--hover": `var(--${color}-hover)`,
-          "--pressed": `var(--${color}-pressed)`,
-          "--focused": `var(--${color}-focused)`,
+          '--main': `var(--${color}-main)`,
+          '--background': `var(--${color}-background)`,
+          '--border': `var(--${color}-border)`,
+          '--hover': `var(--${color}-hover)`,
+          '--pressed': `var(--${color}-pressed)`,
+          '--focused': `var(--${color}-focused)`,
+          ...style,
         } as React.CSSProperties
       }
     >
       <button
-        className={cn("aw-ui-switch-btn", {
-          "aw-ui-switch-btn-on": active,
+        className={cn('aw-ui-switch-btn', {
+          'aw-ui-switch-btn-on': active,
         })}
         type="button"
-        data-state={active}
-        aria-label={active ? "on" : "off"}
+        data-value={active ? 'on' : 'off'}
+        aria-label={active ? 'on' : 'off'}
         {...props}
       />
       {label && <span>{label}</span>}

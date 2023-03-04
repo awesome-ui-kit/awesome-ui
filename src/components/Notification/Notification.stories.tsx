@@ -1,9 +1,9 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Notification from "./Notification";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Notification from './Notification';
 
 export default {
-  title: "Components/Page elements/Notification",
+  title: 'Components/Page elements/Notification',
   component: Notification,
 } as ComponentMeta<typeof Notification>;
 
@@ -13,8 +13,9 @@ const Template: ComponentStory<typeof Notification> = (args) => (
 
 export const InfoNotification = Template.bind({});
 InfoNotification.args = {
-  color: "info",
-  title: "Info notification",
+  color: 'info',
+  title: 'Info notification',
+  onClose: () => console.log('close'),
   children: (
     <>
       <p>
@@ -29,8 +30,9 @@ InfoNotification.args = {
 
 export const SuccessNotification = Template.bind({});
 SuccessNotification.args = {
-  color: "success",
-  title: "Success notification",
+  color: 'success',
+  title: 'Success notification',
+  onClose: () => console.log('close'),
   children: (
     <>
       <p>
@@ -45,8 +47,9 @@ SuccessNotification.args = {
 
 export const DangerNotification = Template.bind({});
 DangerNotification.args = {
-  color: "danger",
-  title: "Danger notification",
+  color: 'danger',
+  title: 'Danger notification',
+  onClose: () => console.log('close'),
   children: (
     <>
       <p>
@@ -61,8 +64,9 @@ DangerNotification.args = {
 
 export const WarningNotification = Template.bind({});
 WarningNotification.args = {
-  color: "warning",
-  title: "Warning notification",
+  color: 'warning',
+  title: 'Warning notification',
+  onClose: () => console.log('close'),
   children: (
     <>
       <p>

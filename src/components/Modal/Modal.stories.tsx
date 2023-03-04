@@ -1,10 +1,10 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Modal from "./Modal";
-import Button from "../Button";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Modal from './Modal';
+import Button from '../Button';
 
 export default {
-  title: "Components/Page elements/Modal",
+  title: 'Components/Page elements/Modal',
   component: Modal,
 } as ComponentMeta<typeof Modal>;
 
@@ -12,7 +12,8 @@ const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 
 export const PrimaryModal = Template.bind({});
 PrimaryModal.args = {
-  title: "Modal Window",
+  title: 'Modal Window',
+  onClose: () => console.log('close'),
   children: (
     <>
       <p>
@@ -21,7 +22,7 @@ PrimaryModal.args = {
         pulvinar nullam auctor in dolor congue amet in quis. Nec amet tristique
         tristique vestibulum senectus.
       </p>
-      <div style={{ display: "flex", justifyContent: "end", gap: 10 }}>
+      <div style={{ display: 'flex', justifyContent: 'end', gap: 10 }}>
         <Button>Okay</Button>
         <Button view="secondary">Cancel</Button>
       </div>
@@ -31,8 +32,9 @@ PrimaryModal.args = {
 
 export const SuccessModal = Template.bind({});
 SuccessModal.args = {
-  title: "Modal Window",
-  color: "success",
+  title: 'Modal Window',
+  onClose: () => console.log('close'),
+  color: 'success',
   children: (
     <>
       <p>
@@ -41,7 +43,7 @@ SuccessModal.args = {
         pulvinar nullam auctor in dolor congue amet in quis. Nec amet tristique
         tristique vestibulum senectus.
       </p>
-      <div style={{ display: "flex", justifyContent: "end", gap: 10 }}>
+      <div style={{ display: 'flex', justifyContent: 'end', gap: 10 }}>
         <Button color="success">Okay</Button>
         <Button color="success" view="secondary">
           Cancel
@@ -53,8 +55,9 @@ SuccessModal.args = {
 
 export const DangerModal = Template.bind({});
 DangerModal.args = {
-  title: "Modal Window",
-  color: "danger",
+  title: 'Modal Window',
+  onClose: () => console.log('close'),
+  color: 'danger',
   children: (
     <>
       <p>
@@ -63,7 +66,7 @@ DangerModal.args = {
         pulvinar nullam auctor in dolor congue amet in quis. Nec amet tristique
         tristique vestibulum senectus.
       </p>
-      <div style={{ display: "flex", justifyContent: "end", gap: 10 }}>
+      <div style={{ display: 'flex', justifyContent: 'end', gap: 10 }}>
         <Button color="danger">Okay</Button>
         <Button color="danger" view="secondary">
           Cancel
@@ -75,8 +78,9 @@ DangerModal.args = {
 
 export const WarningModal = Template.bind({});
 WarningModal.args = {
-  title: "Modal Window",
-  color: "warning",
+  title: 'Modal Window',
+  onClose: () => console.log('close'),
+  color: 'warning',
   children: (
     <>
       <p>
@@ -85,7 +89,7 @@ WarningModal.args = {
         pulvinar nullam auctor in dolor congue amet in quis. Nec amet tristique
         tristique vestibulum senectus.
       </p>
-      <div style={{ display: "flex", justifyContent: "end", gap: 10 }}>
+      <div style={{ display: 'flex', justifyContent: 'end', gap: 10 }}>
         <Button color="warning">Okay</Button>
         <Button color="warning" view="secondary">
           Cancel
@@ -97,8 +101,9 @@ WarningModal.args = {
 
 export const InfoModal = Template.bind({});
 InfoModal.args = {
-  title: "Modal Window",
-  color: "info",
+  title: 'Modal Window',
+  onClose: () => console.log('close'),
+  color: 'info',
   children: (
     <>
       <p>
@@ -107,7 +112,7 @@ InfoModal.args = {
         pulvinar nullam auctor in dolor congue amet in quis. Nec amet tristique
         tristique vestibulum senectus.
       </p>
-      <div style={{ display: "flex", justifyContent: "end", gap: 10 }}>
+      <div style={{ display: 'flex', justifyContent: 'end', gap: 10 }}>
         <Button color="info">Okay</Button>
         <Button color="info" view="secondary">
           Cancel

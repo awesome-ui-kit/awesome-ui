@@ -1,64 +1,63 @@
+@import "../../assets/styles/mixins.scss";
+
 .aw-ui-accordion button {
   position: relative;
-  margin: 0;
-  width: 100%;
-  font: inherit;
-  text-shadow: none;
   display: block;
-  background-color: var(--grey-200);
-  border: 3px solid transparent;
-  cursor: pointer;
-  outline: none;
+  width: 100%;
+  margin: 0;
   padding: 10px 16px;
   padding-right: 44px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
   color: var(--grey-900);
+  font: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
   text-align: left;
+  text-shadow: none;
+  background-color: var(--grey-300);
+  border: 3px solid transparent;
+  outline: none;
+  cursor: pointer;
   transition: background-color 0.5s;
 
   &::before {
-    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
     display: block;
     width: 20px;
     height: 20px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
     background-image: url("../../assets/images/arrow-down.svg");
     background-repeat: no-repeat;
     background-position: center;
+    content: "";
   }
 
   &:hover {
-    background-color: var(--grey-300);
+    background-color: var(--grey-400);
   }
 
-  &:focus-visible {
-    border-color: var(--grey-300);
+  @include focus-visible {
+    border-color: var(--grey-400);
   }
 }
 
 .aw-ui-accordion-show button {
-  background-color: var(--grey-300);
+  background-color: var(--grey-400);
 
   &::before {
     transform: rotate(-180deg);
   }
 
-  &:focus-visible {
-    border-color: var(--grey-400);
+  @include focus-visible {
+    border-color: var(--grey-300);
   }
 }
 
 .aw-ui-accordion div {
   display: none;
-  color: var(--grey-700);
   padding: 10px 16px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
+  color: var(--grey-700);
   background-color: var(--grey-200);
 }
 

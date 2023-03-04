@@ -1,11 +1,17 @@
-import { DetailedHTMLProps, SelectHTMLAttributes } from "react";
-import { IOption } from "./types";
+import { DetailedHTMLProps, SelectHTMLAttributes } from 'react';
+import { IStyle } from '../../types/IStyle';
+import { IOption } from './types';
 
 export interface SelectProps
-  extends DetailedHTMLProps<
-    SelectHTMLAttributes<HTMLSelectElement>,
-    HTMLSelectElement
+  extends Omit<
+    DetailedHTMLProps<
+      SelectHTMLAttributes<HTMLSelectElement>,
+      HTMLSelectElement
+    >,
+    'style'
   > {
-  color?: "grey" | "primary" | "success" | "danger" | "info";
   options: IOption[];
+  color?: 'grey' | 'primary' | 'success' | 'danger' | 'info';
+  sizing?: 'normal' | 'big';
+  style?: IStyle;
 }

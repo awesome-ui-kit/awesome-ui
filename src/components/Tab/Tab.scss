@@ -1,25 +1,28 @@
+@import "../../assets/styles/mixins.scss";
+
 .aw-ui-tab {
-  margin: 0;
   display: inline-block;
-  background-color: var(--grey-100);
-  font: inherit;
-  border: none;
+  margin: 0;
+  padding: 12px 16px;
   color: var(--grey-900);
+  font: inherit;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
-  padding: 12px 16px;
+  background-color: var(--grey-100);
+  border: none;
   cursor: pointer;
 
   &:hover {
     color: var(--primary-hover);
+    background-color: var(--primary-background);
   }
 
-  &:focus-visible {
-    outline: 3px solid var(--primary-background);
+  @include focus-visible {
     position: relative;
     z-index: 1;
+    outline: 3px solid var(--primary-background);
   }
 
   &:active {
@@ -39,7 +42,7 @@
     box-shadow: inset 0px -4px 0px var(--primary-hover);
   }
 
-  &:focus-visible {
+  @include focus-visible {
     box-shadow: none;
   }
 

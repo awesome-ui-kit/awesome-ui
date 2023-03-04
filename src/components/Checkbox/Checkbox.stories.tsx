@@ -1,9 +1,9 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Checkbox from "./Checkbox";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Checkbox from './Checkbox';
 
 export default {
-  title: "Components/Form elements/Checkbox",
+  title: 'Components/Form elements/Checkbox',
   component: Checkbox,
 } as ComponentMeta<typeof Checkbox>;
 
@@ -13,18 +13,18 @@ const Template: ComponentStory<typeof Checkbox> = (args) => (
 
 export const MainCheckbox = Template.bind({});
 MainCheckbox.args = {
-  label: "Label example",
-  fieldId: "example-id",
-  value: "example-value",
-  name: "example",
+  label: 'Label example',
+  fieldId: 'example-id',
+  value: 'example-value',
+  name: 'example',
 };
-MainCheckbox.storyName = "Checkbox";
+MainCheckbox.storyName = 'Checkbox';
 
 export const DisabledCheckbox = Template.bind({});
 DisabledCheckbox.args = {
-  label: "Label example",
-  fieldId: "example-id",
-  value: "example-value",
-  name: "example",
+  label: 'Label example',
+  fieldId: 'example-id',
+  value: 'example-value',
+  name: 'example',
   disabled: true,
 };

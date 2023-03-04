@@ -1,9 +1,9 @@
 .aw-ui-alert {
-  border-radius: 4px;
+  color: var(--main);
+  font-weight: 400;
   background-color: var(--background);
   border: 1px solid var(--border);
-  font-weight: 400;
-  color: var(--main);
+  border-radius: 4px;
 }
 
 .aw-ui-alert-normal {
