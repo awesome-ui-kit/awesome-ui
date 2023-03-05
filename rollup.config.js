@@ -9,7 +9,6 @@ import { terser } from 'rollup-plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import copy from 'rollup-plugin-copy-assets';
 
-const path = require('path');
 const packageJson = require('./package.json');
 
 export default [

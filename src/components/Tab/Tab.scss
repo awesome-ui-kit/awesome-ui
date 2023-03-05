@@ -1,4 +1,4 @@
-@import "../../assets/styles/mixins.scss";
+@import '../../assets/styles/mixins.scss';
 
 .aw-ui-tab {
   display: inline-block;
@@ -22,7 +22,7 @@
   @include focus-visible {
     position: relative;
     z-index: 1;
-    outline: 3px solid var(--primary-background);
+    box-shadow: 0 0 0 3px var(--primary-background);
   }
 
   &:active {

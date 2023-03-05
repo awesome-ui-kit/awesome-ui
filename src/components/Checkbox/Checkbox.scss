@@ -1,4 +1,4 @@
-@import "../../assets/styles/mixins.scss";
+@import '../../assets/styles/mixins.scss';
 
 .aw-ui-checkbox-label {
   position: relative;
@@ -23,7 +23,7 @@
   border: 1px solid var(--main);
   border-radius: 4px;
   transition: background-color 0.3s, border 0.3s;
-  content: "";
+  content: '';
 }
 
 .aw-ui-checkbox-input:hover + label::before {
@@ -35,7 +35,7 @@
 }
 
 .aw-ui-checkbox-input:focus-visible + label::before {
-  outline: 2px solid var(--focused);
+  box-shadow: 0 0 0 2px var(--focused);
 }
 
 .aw-ui-checkbox-input:checked + label::before {
@@ -50,16 +50,16 @@
   height: 14px;
   background-repeat: no-repeat;
   background-position: center;
-  content: "";
+  content: '';
 }
 
 .aw-ui-checkbox-input-classic:checked + label::after {
-  background-image: url("../../assets/images/mark.svg");
+  background-image: url('../../assets/images/mark.svg');
   background-size: 12px 9px;
 }
 
 .aw-ui-checkbox-input-modern:checked + label::after {
-  background-image: url("../../assets/images/square.svg");
+  background-image: url('../../assets/images/square.svg');
   background-size: contain;
 }
 
