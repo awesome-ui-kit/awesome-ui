@@ -1,12 +1,13 @@
-@import "../../assets/styles/mixins.scss";
+@import '../../assets/styles/mixins.scss';
 
 .aw-ui-select {
   display: block;
   width: 100%;
   padding: 6px 40px 6px 16px;
+  color: var(--grey-900);
   font: inherit;
   background-color: var(--grey-100);
-  background-image: url("../../assets/images/arrow-down.svg");
+  background-image: url('../../assets/images/arrow-down.svg');
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
   border: 1px solid var(--border-color);
@@ -30,6 +31,10 @@
     background-color: var(--grey-300);
     border: 1px solid var(--grey-300);
   }
+}
+
+.aw-ui-select option {
+  color: var(--grey-900);
 }
 
 .aw-ui-select-normal {

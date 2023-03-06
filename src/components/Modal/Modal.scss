@@ -1,4 +1,4 @@
-@import "../../assets/styles/mixins.scss";
+@import '../../assets/styles/mixins.scss';
 
 .aw-ui-modal {
   position: fixed;
@@ -25,37 +25,38 @@
     height: 24px;
     background-repeat: no-repeat;
     background-size: contain;
-    content: "";
+    content: '';
   }
 }
 
 .aw-ui-modal-success .aw-ui-modal-section {
   &::before {
-    background-image: url("../../assets/images/success-icon.svg");
+    background-image: url('../../assets/images/success-icon.svg');
   }
 }
 
 .aw-ui-modal-danger .aw-ui-modal-section {
   &::before {
-    background-image: url("../../assets/images/danger-icon.svg");
+    background-image: url('../../assets/images/danger-icon.svg');
   }
 }
 
 .aw-ui-modal-warning .aw-ui-modal-section {
   &::before {
-    background-image: url("../../assets/images/warning-icon.svg");
+    background-image: url('../../assets/images/warning-icon.svg');
   }
 }
 
 .aw-ui-modal-info .aw-ui-modal-section {
   &::before {
-    background-image: url("../../assets/images/info-icon.svg");
+    background-image: url('../../assets/images/info-icon.svg');
   }
 }
 
 .aw-ui-modal-section {
   position: relative;
-  width: 450px;
+  width: calc(100% - 20px);
+  max-width: 450px;
   padding: 24px;
   background: var(--grey-200);
   border-radius: 4px;

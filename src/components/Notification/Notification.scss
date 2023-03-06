@@ -1,4 +1,4 @@
-@import "../../assets/styles/mixins.scss";
+@import '../../assets/styles/mixins.scss';
 
 .aw-ui-notification {
   position: fixed;
@@ -23,37 +23,38 @@
     height: 24px;
     background-repeat: no-repeat;
     background-size: contain;
-    content: "";
+    content: '';
   }
 }
 
 .aw-ui-notification-success .aw-ui-notification-section {
   &::before {
-    background-image: url("../../assets/images/success-icon.svg");
+    background-image: url('../../assets/images/success-icon.svg');
   }
 }
 
 .aw-ui-notification-danger .aw-ui-notification-section {
   &::before {
-    background-image: url("../../assets/images/danger-icon.svg");
+    background-image: url('../../assets/images/danger-icon.svg');
   }
 }
 
 .aw-ui-notification-warning .aw-ui-notification-section {
   &::before {
-    background-image: url("../../assets/images/warning-icon.svg");
+    background-image: url('../../assets/images/warning-icon.svg');
   }
 }
 
 .aw-ui-notification-info .aw-ui-notification-section {
   &::before {
-    background-image: url("../../assets/images/info-icon.svg");
+    background-image: url('../../assets/images/info-icon.svg');
   }
 }
 
 .aw-ui-notification-section {
   position: relative;
-  width: 450px;
+  width: calc(100% - 20px);
+  max-width: 450px;
   padding: 24px;
   padding-left: 64px;
   background: var(--grey-200);
