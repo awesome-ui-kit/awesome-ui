@@ -1,6 +1,6 @@
 # Awesome UI
 
-This is a simple ui-framework, which will allow you to create an awesome web-applications with already prepared and thought out to the smallest detail components. See <a href="https://awesome-ui-kit.github.io/awesome-ui/?path=/story/documentation-introduction--page">documentation</a>
+This is a simple ui-framework, which will allow you to create an awesome web-applications with already prepared and thought out to the smallest detail components. Go to <a href="https://awesome-ui-kit.github.io/awesome-ui/?path=/story/documentation-introduction--page" target="_blank">documentation</a>
 
 <h2>Installation</h2>
 
